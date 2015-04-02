@@ -15,7 +15,6 @@
 		25E2111B1AA945790035AEF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E211191AA945790035AEF3 /* LaunchScreen.xib */; };
 		25E211271AA945790035AEF3 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E211261AA945790035AEF3 /* Pitch_PerfectTests.swift */; };
 		25F16A001ABF3C700062C271 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F169FF1ABF3C700062C271 /* PlaySoundsViewController.swift */; };
-		25F16A021ABF992C0062C271 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25F16A011ABF992C0062C271 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		25E211251AA945790035AEF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E211261AA945790035AEF3 /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		25F169FF1ABF3C700062C271 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		25F16A011ABF992C0062C271 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 		25E2110E1AA945790035AEF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				25F16A011ABF992C0062C271 /* movie_quote.mp3 */,
 				25E2110F1AA945790035AEF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -203,7 +200,6 @@
 			files = (
 				25E211161AA945790035AEF3 /* Main.storyboard in Resources */,
 				25E2111B1AA945790035AEF3 /* LaunchScreen.xib in Resources */,
-				25F16A021ABF992C0062C271 /* movie_quote.mp3 in Resources */,
 				25E211181AA945790035AEF3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
