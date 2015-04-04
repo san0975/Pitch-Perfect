@@ -17,10 +17,12 @@ import AVFoundation
 
     The buttons for playing the recorded sounds will have images corresponding to their sound effect:
 
-    Chipmunk image → High­pitched sound
-    Darth Vader image → Low­pitched sound
-    Snail image → Slow sound
-    Rabbit image → Fast sound
+    Chipmunk image -> High­pitched sound
+    Darth Vader image -> Low­pitched sound
+    Snail image -> Slow sound
+    Rabbit image -> Fast sound
+    Echo image -> Echo sound
+    Reverb image -> Play sound with acoustic characteristics
 */
 
 class PlaySoundsViewController: UIViewController {

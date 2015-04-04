@@ -17,10 +17,9 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingInProgress: UILabel!
-
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var resumeButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     
     var audioRecorder:AVAudioRecorder!
@@ -32,12 +31,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     override func viewWillAppear(animated: Bool) {
+        
+        /* hide the stop, pause and resume buttons */
         stopButton.hidden = true
         pauseButton.hidden = true
         resumeButton.hidden = true
         
+        /* Enable the record button */
         recordButton.enabled = true
         
+        /* Set the recordingInProgress lable text  to "Tap to Record"*/
         recordingInProgress.text = "Tap to Record"
     }
     
@@ -48,12 +51,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
 
+        /* Disable the record button */
         recordButton.enabled = false
-
+        
+        /* Show the stop, pause and resume buttons*/
         stopButton.hidden = false
         resumeButton.hidden = false
         pauseButton.hidden = false
         
+        /* Set the recordingInProgress lable text  to "recording in progress..."*/
         recordingInProgress.text = "recording in progress..."
 
         
@@ -81,6 +87,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         
+        // Fix added for low volume on device. ( Setting to playback fixes the issue ).
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayback, error: nil)
         
@@ -110,19 +117,24 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    
     @IBAction func pauseRecording(sender: UIButton) {
       
+        /* Set the recordingInProgress lable text  to "recording paused..."*/
         recordingInProgress.text = "recording paused..."
         
         audioRecorder.pause()
     }
     
+    
     @IBAction func resumeRecording(sender: UIButton) {
         
+        /* Set the recordingInProgress lable text  to "recording in progress..."*/
         recordingInProgress.text = "recording in progress..."
         
         audioRecorder.record()
     }
+    
     
     @IBAction func recordingStop(sender: UIButton) {
 
@@ -130,5 +142,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
     }
+    
 }
 
